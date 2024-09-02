@@ -39,8 +39,9 @@ class Plataforma extends Controller
         $users = User::all();
         return view('videos.video6', compact('users'));
     }
-    public function robo () {
+    public function robo (Request $request) {
         $users = User::all();
-        return view('robo', compact('users'));
+        $token = $request->token1;
+        return view('robo', compact('users', 'token'));
     }
 }

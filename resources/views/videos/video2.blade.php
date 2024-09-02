@@ -61,11 +61,11 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <img style="width: 250px; margin-left: 50px" src="{{ asset('assets/employ_24_small_logo.png') }}"
+        <img style="width: 250px; margin-left: 50px;" src="{{ asset('assets/logovortex.png') }}"
             class="logo" />
         <div class="navbar-right">
             <span id="current-date"></span>
-            <i style="font-size: 1.8rem" class="bi bi-person-circle mx-3"></i>
+            <i style="font-size: 1.8rem;" class="bi bi-person-circle mx-3"></i>
         </div>
     </nav>
 
@@ -73,11 +73,10 @@
     <div class="main-layout">
         <!-- Barra lateral -->
         <div class="sidebar">
-            <a href="#"><i class="bi bi-house-door-fill"></i></a>
-            <a href="#"><i class="bi bi-robot"></i></a>
+            <a href="{{route('index')}}"><i class="bi bi-house-door-fill"></i></a>
+            <a href="{{route('robo')}}"><i class="bi bi-robot"></i></a>
             <a href="#"><i class="bi bi-calendar-range-fill"></i></a>
-            <a href="#"><i class="bi bi-play-fill"></i></a>
-            <a href="#"><i class="bi bi-file-earmark-check-fill"></i></a>
+            <a href="{{route('aulas')}}"><i class="bi bi-play-fill"></i></a>
         </div>
 
         <!-- Conteúdo principal -->

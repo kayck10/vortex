@@ -2,59 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
+    // Exibe a página de login
     public function login()
     {
         return view('auth.login');
     }
 
-    public function auth(Request $request)
+    // Lida com a autenticação do usuário
+    public function authenticate(Request $request)
     {
-
+        // Valida os dados de entrada
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
 
+        // Tenta autenticar o usuário
         if (auth()->attempt($request->only('email', 'password'))) {
-            return to_route('index');
+            return redirect()->route('index'); // Redireciona para a página principal em caso de sucesso
         } else {
+            // Define uma mensagem de erro na sessão
             Session::flash('mensagem.falha', 'Email ou senha inválidos');
-            return redirect()->back();
+            return redirect()->back(); // Redireciona de volta ao formulário de login em caso de falha
         }
     }
-
-
-    public function authenticate(Request $request)
-    {
-        $request->validate([
-            "email" => 'required',
-            "password" => 'required',
-            'remember' => 'nullable',
-        ]);
-        try {
-            $auth = Auth::attempt(["email" => $request->input('email'), "password" => $request->input('password')], $request->input('remember'));
-
-            if (!$auth) {
-                throw new Exception('LOGIN_FAILED');
-            }
-
-            return view('index');
-        } catch (Exception $error) {
-            return response()->json(
-                ['message' => 'Email ou senha inválidos'],
-                400,
-                [],
-                JSON_UNESCAPED_UNICODE
-            );
-        }
-    }
-
-
 }

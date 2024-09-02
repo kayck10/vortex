@@ -126,11 +126,10 @@
     <div class="main-layout">
         <!-- Barra lateral -->
         <div class="sidebar">
-            <a href="#"><i class="bi bi-house-door-fill"></i></a>
-            <a href="#"><i class="bi bi-robot"></i></a>
+            <a href="{{route('index')}}"><i class="bi bi-house-door-fill"></i></a>
+            <a href="{{route('robo')}}"><i class="bi bi-robot"></i></a>
             <a href="#"><i class="bi bi-calendar-range-fill"></i></a>
-            <a href="#"><i class="bi bi-play-fill"></i></a>
-            <a href="#"><i class="bi bi-file-earmark-check-fill"></i></a>
+            <a href="{{route('aulas')}}"><i class="bi bi-play-fill"></i></a>
         </div>
 
         <!-- Conteúdo principal -->
@@ -186,15 +185,15 @@
                             <a href="trading.html">
                                 <div class="action-card">
                                     <a href="{{ route('video5') }}">
-                                        <img src="{{ asset('assets/tutorial.jpg') }}" alt="Trading Image" />
+                                        <img src="{{ asset('assets/robo.jpeg') }}" alt="Trading Image" />
                                         <h3>EASY</h3>
                                     </a>
                                 </div>
                         </div>
                         <div class="col-md-2">
                             <div class="action-card">
-                                <a href="{{ route('video5') }}">
-                                    <img src="{{ asset('assets/tutorial.jpg') }}" alt="News Image" />
+                                <a href="{{ route('video6') }}">
+                                    <img src="{{ asset('assets/saque.jpg') }}" alt="News Image" />
                                     <h3>SACANDO DINHEIRO DA AIRTM</h3>
                                 </a>
                             </div>

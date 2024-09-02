@@ -12,10 +12,13 @@
 </head>
 
 <body>
+    <a href="{{ route('aulas') }}"><i style="font-size: 1.8rem; color:#fcee09;"
+        class="bi bi-arrow-left-circle mx-5"></i></a>
+    <div>
     <div class="cont container-fluid">
         <nav class="barra col-12 col-md-10 col-lg-8 mx-auto d-flex align-items-center justify-content-between">
             <div class="power">
-                <i class="bi bi-power icone text-light"></i>
+                <i class="bi bi-power icone text-dark"></i>
             </div>
             <div class="cuenta text-light">
                 <h5>Cuenta dólar</h5>

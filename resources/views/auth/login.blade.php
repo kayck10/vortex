@@ -48,7 +48,19 @@
                             {{ Session::get('mensagem.falha') }}
                         </div>
                     @endif
-                    <form class="mt-5" method="POST" action="{{route('login.auth')}}">
+
+                    <!-- Exibir mensagens de erro de validação -->
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    <form class="mt-5" method="POST" action="{{ route('login.auth') }}">
                         @csrf
                         <div class="text-light mb-5 px-5 text-center">
                             <h5 class="border-bottom border-3 d-inline-block" style="border-color: #9400D3;">Faça Login</h5>
@@ -63,7 +75,7 @@
                             <input type="password" name="password" id="form1Example23" class="form-control form-control-lg" placeholder="Digite sua senha" />
                         </div>
 
-                        <a style="text-decoration: none; color:#ffffff" href="{{route('cadastro.create')}}">Não tem conta? Cadastre-se</a>
+                        <a style="text-decoration: none; color:#ffffff" href="{{ route('cadastro.create') }}">Não tem conta? Cadastre-se</a>
 
                         <button type="submit" class="btn btn-primary btn-lg btn-block">Faça Login</button>
                     </form>

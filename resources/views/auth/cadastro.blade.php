@@ -43,17 +43,28 @@
                     <img style="height: 300px;" src="{{ asset('assets/elefante.png') }}" class="phone-image" alt="Phone image">
                 </div>
                 <div class="col-md-6">
-                    <form class="mt-5" action="{{route('cadastro.store')}}" method="POST" >
+                    <form class="mt-5" action="{{route('cadastro.store')}}" method="POST">
                         @csrf
                         <div class="text-light mb-5 px-5 text-center">
                             <h5 class="border-bottom border-3 d-inline-block" style="border-color: #9400D3;">Cadastre-se</h5>
                         </div>
 
+                        <!-- Exibição de mensagens de erro -->
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
                         <div class="form-outline mb-4">
-                            <input type="text" name="name" id="form1Example13" class="form-control form-control-lg" placeholder="Digite seu nome de usuário" />
+                            <input type="text" name="name" id="form1Example13" class="form-control form-control-lg" placeholder="Digite seu nome de usuário" value="{{ old('name') }}" />
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="email" name="email" id="form1Example13" class="form-control form-control-lg" placeholder="Diga seu melhor email" />
+                            <input type="email" name="email" id="form1Example13" class="form-control form-control-lg" placeholder="Diga seu melhor email" value="{{ old('email') }}" />
                         </div>
 
                         <!-- Password input -->

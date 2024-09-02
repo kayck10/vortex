@@ -61,22 +61,22 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <img style="width: 250px; margin-left: 50px;" src="{{ asset('assets/logovortex.png') }}"
-            class="logo" />
+        <img style="width: 250px; margin-left: 50px;" src="{{ asset('assets/logovortex.png') }}" class="logo" />
         <div class="navbar-right">
             <span id="current-date"></span>
             <i style="font-size: 1.8rem;" class="bi bi-person-circle mx-3"></i>
         </div>
     </nav>
 
+
     <!-- Layout Principal -->
     <div class="main-layout">
         <!-- Barra lateral -->
         <div class="sidebar">
-            <a href="{{route('index')}}"><i class="bi bi-house-door-fill"></i></a>
-            <a href="{{route('robo')}}"><i class="bi bi-robot"></i></a>
+            <a href="{{ route('index') }}"><i class="bi bi-house-door-fill"></i></a>
+            <a href="{{ route('robo') }}"><i class="bi bi-robot"></i></a>
             <a href="#"><i class="bi bi-calendar-range-fill"></i></a>
-            <a href="{{route('aulas')}}"><i class="bi bi-play-fill"></i></a>
+            <a href="{{ route('aulas') }}"><i class="bi bi-play-fill"></i></a>
         </div>
 
         <!-- Conteúdo principal -->
@@ -92,17 +92,16 @@
                     <a href="{{ route('aulas') }}"><i style="font-size: 1.8rem"
                             class="bi bi-arrow-left-circle mx-5"></i></a>
 
-                    <h3 class="mt-5 mx-5 mb-3"><strong>Cadastro na AIRTM</strong>
+
+                    <h3 class="mt-5 mx-5 mb-3"><strong>Sacando dinheiro</strong>
                     </h3>
 
                     <div class="col-6 mx-auto">
                         <iframe width="1000px" height="500px"
-                            src="https://www.youtube.com/embed/CZKpV1qWuI8?si=rWO897zM1Is1gy87"
+                            src="https://www.youtube.com/embed/bUf9xMrN8us?si=JNpVUA8tAAcC9MPW"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                        </iframe>
-
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

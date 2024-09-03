@@ -225,7 +225,7 @@
                 class="logo" />
             <div class="navbar-right">
                 <span id="current-date"></span>
-                <i style="font-size: 1.8rem;" class="bi bi-person-circle mx-3"></i>
+                <a href="{{route('login.edit')}}"><i style="font-size: 1.8rem;" class="bi bi-person-circle mx-3"></i></a>
             </div>
         </nav>
 

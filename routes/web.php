@@ -21,6 +21,10 @@ Route::post('/cadastro/store', [CadastroController::class, 'store'])->name('cada
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('login/auth', [LoginController::class, 'authenticate'])->name('login.auth');
+Route::get('login/edit', [LoginController::class, 'edit'])->name('login.edit');
+Route::put('login/put', [LoginController::class, 'update'])->name('login.put');
+
+
 
 Route::get('plataforma', [Plataforma::class, 'index'])->name('index');
 Route::get('aulas', [Plataforma::class, 'aulas'])->name('aulas');

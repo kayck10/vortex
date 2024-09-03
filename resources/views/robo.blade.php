@@ -80,18 +80,11 @@
                     <th scope="col">Tipo</th>
                     <th scope="col">Ref</th>
                     <th scope="col">Entrada</th>
-                    <th scope="col">Salida</th>
-                    <th scope="col">Precio</th>
+
                 </tr>
             </thead>
-            <tbody>
-                <tr style="display: none">
-                    <td>Digitunder-7</td>
-                    <td>48223422</td>
-                    <td>70</td>
-                    <td>80</td>
-                    <td>10</td>
-                </tr>
+            <tbody id="historicoOperacao">
+
             </tbody>
         </table>
 

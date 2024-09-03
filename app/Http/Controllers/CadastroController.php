@@ -20,7 +20,7 @@ class CadastroController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email|max:255',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:8',
         ], [
             'name.required' => 'O nome é obrigatório.',
             'email.required' => 'O email é obrigatório.',
@@ -28,7 +28,6 @@ class CadastroController extends Controller
             'email.unique' => 'Este email já está registrado.',
             'password.required' => 'A senha é obrigatória.',
             'password.min' => 'A senha deve ter pelo menos 8 caracteres.',
-            'password.confirmed' => 'A confirmação da senha não corresponde.',
         ]);
 
         // Criação do usuário

@@ -6,8 +6,9 @@ body {
     color: #fff;
     overflow-x: hidden;
     position: relative;
-  }
-  .cont {
+}
+
+.cont {
     padding-top: 10px;
     min-height: 100vh;
     background: rgba(5, 5, 5, 0.6);
@@ -16,8 +17,9 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  }
-  .power {
+}
+
+.power {
     position: absolute;
     top: 10px;
     left: 30px;
@@ -30,8 +32,9 @@ body {
     justify-content: center;
     z-index: 1;
     background-color: #fcee09;
-  }
-  .barra {
+}
+
+.barra {
     width: 98%;
     border-radius: 20px;
     height: 120px;
@@ -41,15 +44,18 @@ body {
     margin-bottom: 20px;
     box-shadow: 0 4px 8px #fcee09;
     transition: background-color 0.3s ease;
-  }
-  .barra:hover {
+}
+
+.barra:hover {
     background-color: #fcee09;
-  }
-  .icone {
+}
+
+.icone {
     font-size: 2rem;
-  }
-  .saldo,
-  .perda {
+}
+
+.saldo,
+.perda {
     width: 98%;
     border-radius: 20px;
     height: 120px;
@@ -61,35 +67,64 @@ body {
     align-items: center;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
-  }
-  .saldo:hover,
-  .perda:hover {
+}
+
+.saldo:hover,
+.perda:hover {
     background-color: #fcee09;
-  }
-  .saldo h5,
-  .perda h5 {
+}
+
+.saldo h5,
+.perda h5 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-  }
-  .saldo p,
-  .perda p {
+}
+
+.saldo p,
+.perda p {
     font-size: 1.2rem;
     margin: 0;
-  }
-  .cuenta {
+}
+
+.cuenta {
     position: absolute;
     top: 40px;
     right: 60px;
     text-align: right;
-  }
-  .recarregar {
+}
+
+.recarregar {
     font-size: 2rem;
     position: absolute;
     top: 40px;
     right: 10px;
     z-index: 1;
-  }
-  .button {
+}
+
+.hidden {
+    display: none;
+}
+
+.progress-group-bot {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px #fcee09;
+    border-radius: 20px;
+    background-color: #181817;
+    transition: background-color 0.3s ease;
+}
+
+.loose_td {
+    font-weight: bold;
+    color: rgb(255, 0, 0) !important;
+}
+.won_td {
+    font-weight: bold;
+    color: rgb(0, 102, 31) !important;
+}
+
+.button {
     background-color: #181816;
     border: 2px solid #fcee09;
     color: #000;
@@ -100,66 +135,80 @@ body {
     position: relative;
     overflow: hidden;
     animation: pulse 0.7s infinite alternate;
-  }
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     100% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  }
-  .custom-table {
+}
+
+.custom-table {
     width: 100%;
     background-color: #fcee09;
     color: #2b2828;
     border-collapse: collapse;
     margin-top: 20px;
-  }
-  .custom-table th,
-  .custom-table td {
+}
+
+.custom-table th,
+.custom-table td {
     border: 1px solid #fcee09;
     padding: 8px;
     text-align: left;
     background-color: #fcee09;
-  }
-  .custom-table th {
+}
+
+.custom-table th {
     background-color: rgba(23, 21, 24, 0.5);
-  }
-  .tabela {
+}
+
+.tabela {
     width: 95%;
     margin-top: 20px;
     overflow-x: auto;
-  }
-  footer {
+}
+
+footer {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     padding: 20px 0;
     width: 100%;
     bottom: 0;
-  }
-  .loading-icons .bi-circle-fill {
+}
+
+.loading-icons .bi-circle-fill {
     opacity: 0.5;
     animation: loading-animation 1.5s infinite;
-  }
-  .loading-icons .bi-circle-fill:nth-child(1) {
+}
+
+.loading-icons .bi-circle-fill:nth-child(1) {
     animation-delay: 0s;
-  }
-  .loading-icons .bi-circle-fill:nth-child(2) {
+}
+
+.loading-icons .bi-circle-fill:nth-child(2) {
     animation-delay: 0.5s;
-  }
-  .loading-icons .bi-circle-fill:nth-child(3) {
+}
+
+.loading-icons .bi-circle-fill:nth-child(3) {
     animation-delay: 1s;
-  }
-  @keyframes loading-animation {
+}
+
+@keyframes loading-animation {
+
     0%,
     100% {
-      opacity: 0.5;
-      transform: scale(1);
+        opacity: 0.5;
+        transform: scale(1);
     }
+
     50% {
-      opacity: 1;
-      transform: scale(1.5);
+        opacity: 1;
+        transform: scale(1.5);
     }
-  }
+}
